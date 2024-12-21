@@ -1,0 +1,126 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Color Variables */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #000;
+    --button-bg: #007BFF;
+    --button-text: #fff;
+    --button-hover: #0056b3;
+    --equal-bg: #28a745;
+    --equal-hover: #1e7e34;
+    --display-bg: #f9f9f9;
+    --display-text: #000;
+}
+
+body.dark {
+    --bg-color: #1e1e1e;
+    --text-color: #fff;
+    --button-bg: #333;
+    --button-text: #fff;
+    --button-hover: #555;
+    --equal-bg: #6c757d;
+    --equal-hover: #5a6268;
+    --display-bg: #333;
+    --display-text: #fff;
+}
+
+/* Calculator Styles */
+.calculator {
+    background: var(--display-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Header Styles */
+.calculator-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.calculator-header h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: var(--text-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+/* Display Styles */
+.display {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.display input {
+    width: 100%;
+    height: 60px;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: var(--display-bg);
+    border-radius: 5px;
+    text-align: right;
+    color: var(--display-text);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Buttons Section */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 60px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background: var(--button-hover);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button.equal {
+    grid-column: span 2;
+    background: var(--equal-bg);
+}
+
+button.equal:hover {
+    background: var(--equal-hover);
+}
